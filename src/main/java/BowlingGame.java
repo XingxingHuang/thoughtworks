@@ -1,3 +1,5 @@
+package thoughtworks.src.main.java;
+
 import java.util.*;
 
 public class BowlingGame {
@@ -7,7 +9,7 @@ public class BowlingGame {
     private static ArrayList<Frame> frames = new ArrayList<Frame>();
     private static int score = 0;
     
-    private static int getBowlingScore(String str) {
+    public static int getBowlingScore(String str) {
         int start = 0;
         int count = 0;
         // first ten frame

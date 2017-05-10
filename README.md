@@ -26,4 +26,10 @@
 3. 每一个frame的分数与下一个frame相关，需要记录当前frame的情况。
 4. 最后一个frame的处理
 
+# github参考资料
+
+* [try git](https://try.github.io/levels/1/challenges/1)
+* Git 参考手册 [网站](http://gitref.org/zh/index.html)
+* github 用法 [网站](https://guides.github.com/activities/hello-world/)
+
 		

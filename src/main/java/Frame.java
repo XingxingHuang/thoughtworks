@@ -1,3 +1,5 @@
+package thoughtworks.src.main.java;
+
 public class Frame{
     public int[] score = new int[] {-1, -1};
     public int status = 0;
