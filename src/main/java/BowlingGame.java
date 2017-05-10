@@ -1,4 +1,4 @@
-package thoughtworks.src.main.java;
+//package main.java;
 
 
 import java.util.*;
@@ -35,7 +35,7 @@ public class BowlingGame {
         return score;
     }
         
-    private void getBowlingScoreFirst() {
+    public void getBowlingScoreFirst() {
         for (int i = 0; i < 10; i++) {
             int[] frameScore = frames.get(i).score;
             for (int j = 0; j < 2; j++) {
@@ -46,7 +46,7 @@ public class BowlingGame {
         }
     }
     
-    private void getBowlingScoreSecond() {
+    public void getBowlingScoreSecond() {
         for (int i = 0; i < frames.size(); i++) {
             int status = frames.get(i).status;
             if (status >= 1 && i + 1 < frames.size()) {

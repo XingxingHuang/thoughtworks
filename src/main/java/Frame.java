@@ -1,4 +1,4 @@
-package thoughtworks.src.main.java;
+//package main.java;
 
 public class Frame{
     public int[] score = new int[] {-1, -1};
@@ -14,7 +14,7 @@ public class Frame{
     //     this.status = status;
     // }
     
-    private void setState(String str) {
+    public void setState(String str) {
         if (isStrike(str)) {
             status = 2;
         } else if (isSpare(str)) {
@@ -24,7 +24,7 @@ public class Frame{
         }
     }
     
-    private void setScore(String str) {
+    public void setScore(String str) {
         if (str == null || str.length() == 0) {
             return;
         } else if (str.length() == 1) {
@@ -36,7 +36,7 @@ public class Frame{
         }
     }
     
-    private int getOneCharScore(char c) {
+    public int getOneCharScore(char c) {
         if (c == 'X') {
             return 10;
         }
@@ -46,7 +46,7 @@ public class Frame{
         return 0;
     }
     
-    private int[] getTwoCharScore(char[] chars) {
+    public int[] getTwoCharScore(char[] chars) {
         score[0] = getOneCharScore(chars[0]);
         if (status == 1) {
             score[1] = 10 - getOneCharScore(chars[0]);
@@ -56,15 +56,15 @@ public class Frame{
         return score;
     }
     
-    private boolean isStrike(String frame) {
+    public boolean isStrike(String frame) {
         return frame.charAt(0) == 'X';
     }
     
-    private boolean isSpare(String frame) {
+    public boolean isSpare(String frame) {
         return frame.charAt(frame.length() - 1) == '/';
     }
     
-    private boolean isNorm(String frame) {
+    public boolean isNorm(String frame) {
         return !isStrike(frame) && !isSpare(frame);
     }
 }
