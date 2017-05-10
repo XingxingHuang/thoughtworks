@@ -32,6 +32,11 @@
 * Git 参考手册 [网站](http://gitref.org/zh/index.html)
 * github 用法 [网站](https://guides.github.com/activities/hello-world/)
 
+```
+javac -cp .:junit-4.11.jar BowlingGameTest.java
+
+java -cp .:junit-4.11.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore BowlingGameTest
+```
 
 ----
 ----
