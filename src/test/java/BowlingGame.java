@@ -8,10 +8,10 @@ public class BowlingGame {
     /**
      * 
      */
-    private static ArrayList<Frame> frames = new ArrayList<Frame>();
-    private static int score = 0;
+    private ArrayList<Frame> frames = new ArrayList<Frame>();
+    private int score = 0;
     
-    public static int getBowlingScore(String str) {
+    public int getBowlingScore(String str) {
         int start = 0;
         int count = 0;
         // first ten frame
@@ -36,7 +36,7 @@ public class BowlingGame {
         return score;
     }
         
-    private static void getBowlingScoreFirst() {
+    private void getBowlingScoreFirst() {
         for (int i = 0; i < 10; i++) {
             int[] frameScore = frames.get(i).score;
             for (int j = 0; j < 2; j++) {
@@ -47,18 +47,18 @@ public class BowlingGame {
         }
     }
     
-    private static void getBowlingScoreSecond() {
+    private void getBowlingScoreSecond() {
         for (int i = 0; i < frames.size(); i++) {
             int status = frames.get(i).status;
-            if (status >= 1) {
+            if (status >= 1 && i + 1 < frames.size()) {
                 Frame next = frames.get(i + 1);
                 score += next.score[0];
             }
-            if (status == 2) {
+            if (status == 2 && i + 1 < frames.size()) {
                 Frame next = frames.get(i + 1);
                 if (next.score[1] != -1) {
                     score += next.score[1];
-                } else {
+                } else if (i + 2 < frames.size()) {
                     score += frames.get(i + 2).score[0];
                 }
             }
@@ -66,12 +66,12 @@ public class BowlingGame {
         }
     }    
        
-    public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        String str = in.nextLine();
-        System.out.println(getBowlingScore(str));
+    // public static void main(String args[]) {
+    //     Scanner in = new Scanner(System.in);
+    //     String str = in.nextLine();
+    //     System.out.println(getBowlingScore(str));
         // for (int i = 0; i < frames.size(); i++) {
         //     System.out.println(i + "  " + frames.get(i).status);
         // }
-    }
+    // }
 }
