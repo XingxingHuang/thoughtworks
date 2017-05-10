@@ -1,6 +1,6 @@
-//package thoughtworks.src.test.java;
+package thoughtworks.src.test.java;
 
-//import thoughtworks.src.main.java.*;
+import thoughtworks.src.main.java.*;
 
 import org.junit.Test;
 

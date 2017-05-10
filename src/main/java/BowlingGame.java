@@ -1,6 +1,5 @@
-//package thoughtworks.src.main.java;
+package thoughtworks.src.main.java;
 
-//import Frame;
 
 import java.util.*;
 
